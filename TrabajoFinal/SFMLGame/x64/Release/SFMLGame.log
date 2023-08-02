@@ -1,0 +1,20 @@
+﻿  Bullet.cpp
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Bullet.h(3,10): fatal  error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  CollisionManager.cpp
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Entity.h(2,10): fatal  error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  Enemy.cpp
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Entity.h(2,10): fatal  error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  Entity.cpp
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Entity.h(2,10): fatal  error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  EntityManager.cpp
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\EntityManager.h(4,10): fatal  error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  Game.cpp
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Game.h(2,10): fatal  error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  HealthBar.cpp
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\HealthBar.h(3,10): fatal  error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  Heart.cpp
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Heart.h(3,10): fatal  error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  Player.cpp
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Entity.h(2,10): fatal  error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  Source.cpp
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Game.h(2,10): fatal  error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory

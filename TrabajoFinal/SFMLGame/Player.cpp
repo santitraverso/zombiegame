@@ -23,7 +23,7 @@ void Player::Init(RenderWindow* window)
 	this->setOrigin(spriteCenter);
 	radius = 20;
 	points = 0;
-	bool workd = font.loadFromFile("Resources/Fonts/arial.ttf");
+	font.loadFromFile("Resources/Fonts/arial.ttf");
 	text = new Text();
 	text->setFont(font);
 	text->setString(to_string(points));
@@ -34,6 +34,8 @@ void Player::Init(RenderWindow* window)
 	float windowWidth = window->getSize().x;
 	text->setPosition(windowWidth - textWidth - 20, 0);
 	EntityManager::GetInstance()->AddTextEntity(text);
+	highScoreManager = new HighScoreManager();
+	highScoreManager->LoadScoresFromFile("high_scores.dat");
 }
 
 void Player::Update(float deltaTime)
@@ -59,8 +61,8 @@ void Player::Update(float deltaTime)
 		velocity.y = speed;
 	}
 	move(velocity * deltaTime);
-	float xPos = Clamp(getPosition().x, 0.f, (float)screenWidth - texture.getSize().x);
-	float yPos = Clamp(getPosition().y, 0.f, (float)screenHeight - texture.getSize().y);
+	float xPos = Clamp(getPosition().x, 0.f, (float)screenWidth - radius);
+	float yPos = Clamp(getPosition().y, 0.f, (float)screenHeight - radius);
 	setPosition(xPos, yPos);
 	HandleRotation();
 	text->setString(to_string(points));
@@ -88,14 +90,61 @@ void Player::ResolveCollision(Vector2f displacement, Entity* other)
 		other->Kill();
 		currentHP--;
 		if (currentHP <= 0) {
-			 
+			Text* textOver = new Text();
+			textOver->setFont(font);
+			textOver->setString("YOU ARE DEAD");
+			textOver->setCharacterSize(100);
+			textOver->setFillColor(Color::Red);
+			sf::FloatRect textRect = textOver->getLocalBounds();
+			float textWidth = textOver->getLocalBounds().width;
+			float windowWidth = window->getSize().x;
+			textOver->setPosition(windowWidth - textWidth - 20, 0);
+			EntityManager::GetInstance()->AddTextEntity(textOver);
+			this->setColor(Color::Transparent);
+
+			ShowHighScore();
 		}
 	}
 }
 
+
+void Player::ShowHighScore()
+{
+	highScoreManager->AddScore("You", points);
+	Text* textScore = new Text();
+	textScore->setFont(font);
+	textScore->setString("High scores:");
+	textScore->setCharacterSize(50);
+	textScore->setFillColor(Color::Red);
+	sf::FloatRect textRect = textScore->getLocalBounds();
+	float textWidth = textScore->getLocalBounds().width;
+	float windowWidth = window->getSize().x;
+	textScore->setPosition(windowWidth/2, 100);
+	EntityManager::GetInstance()->AddTextEntity(textScore);
+
+	vector<Score*> scores = highScoreManager->GetScores();
+	int height = 140;
+	for (Score* score : scores) {
+		Text* textScorePoints = new Text();
+		textScorePoints->setFont(font);
+		textScorePoints->setString(score->GetName() + ": " + to_string(score->GetPoints()));
+		textScorePoints->setCharacterSize(40);
+		textScorePoints->setFillColor(Color::Red);
+		sf::FloatRect textRect = textScorePoints->getLocalBounds();
+		float textWidth = textScorePoints->getLocalBounds().width;
+		float windowWidth = window->getSize().x;
+		textScorePoints->setPosition(windowWidth/2, height);
+		EntityManager::GetInstance()->AddTextEntity(textScorePoints);
+		height += 40;
+	}
+}
+
+
 void Player::OnMouseClick(int x, int y)
 {
-	Fire(x, y);
+	if (currentHP > 0) {
+		Fire(x, y);
+	}
 }
 
 void Player::AddPoints(int points)

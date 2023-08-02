@@ -77,6 +77,18 @@ void HighScoreManager::DisplayScores() {
 	}
 }
 
-bool HighScoreManager::CompareScores(Score* score1, Score* score2) {
-	return score1->GetPoints() > score2->GetPoints();
+vector<Score*> HighScoreManager::GetScores()
+{
+	return scores;
+}
+
+string HighScoreManager::GetScoresAsString()
+{
+	sort(scores.begin(), scores.end());
+	string scoresString = "High Scores: \n";
+	for (Score* score : scores) {
+		scoresString += score->GetName() + ": " + to_string(score->GetPoints()) + "\n";
+	}
+	return scoresString;
+
 }

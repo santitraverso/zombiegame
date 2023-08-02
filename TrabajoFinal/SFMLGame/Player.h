@@ -1,5 +1,6 @@
 #pragma once
 #include "Entity.h"
+#include "../HighScoreManager/HighScoreManager.h"
 
 class Player : public Entity
 {
@@ -10,6 +11,7 @@ private:
 	RenderWindow* window;
 	bool isInit = false;
 	int points;
+	HighScoreManager* highScoreManager;
 public:
 	Font font;
 	Text* text;
@@ -23,6 +25,7 @@ public:
 	void Fire(int x, int y);
 	void OnMouseClick(int x, int y);
 	void AddPoints(int points);
+	void ShowHighScore();
 private:
 	void HandleRotation();
 };

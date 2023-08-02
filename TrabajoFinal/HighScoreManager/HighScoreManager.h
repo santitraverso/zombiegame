@@ -14,6 +14,6 @@ public:
     void SaveScoresToFile(string fileName);
     void LoadScoresFromFile(string fileName);
     void DisplayScores();
-private:
-    bool CompareScores(Score* score1, Score* score2);
+    vector<Score*> GetScores();
+    string GetScoresAsString();
 };

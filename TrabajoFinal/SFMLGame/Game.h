@@ -5,6 +5,7 @@
 #include "Heart.h"
 #include "CollisionManager.h"
 #include <vector>
+#include "../HighScoreManager/HighScoreManager.h"
 
 using namespace sf;
 
@@ -13,7 +14,7 @@ private:
 	bool isRunning;
 	void _Update(float deltaTime);
 	void _Draw();
-	int maxEnemies = 20;
+	int maxEnemies = 15;
 	Player* player;
 	RenderWindow* window;
 	vector<Enemy*> enemies;

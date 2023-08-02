@@ -159,6 +159,11 @@
     <ClInclude Include="Player.h" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HighScoreManager\HighScoreManager.vcxproj">
+      <Project>{a73a34f8-5c35-4242-93c2-164ac0e7a2c0}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

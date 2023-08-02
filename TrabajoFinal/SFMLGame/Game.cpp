@@ -26,14 +26,15 @@ void Game::_Draw()
     }
     for (Text* textEntity : EntityManager::GetInstance()->GetTextEntities())
     {
-        window->draw(*textEntity);
+        if (textEntity != nullptr)
+            window->draw(*textEntity);
     }
     window->display();
 }
 
 Game::Game() {
     window = new RenderWindow(sf::VideoMode(gameWidth, gameHeight), "My window");
-    
+
     player = new Player(gameWidth, gameHeight);
     player->Init(window);
     HealthBar* healthBar = new HealthBar(player);
@@ -49,7 +50,7 @@ void Game::CreateEnemies()
 {
     std::mt19937 rng(std::random_device{}());
 
-    std::uniform_real_distribution<float> dist(10.0f, 150.0f);
+    std::uniform_real_distribution<float> dist(10.0f, 100.0f);
 
     for (int i = 0; i <= maxEnemies; i++)
     {
