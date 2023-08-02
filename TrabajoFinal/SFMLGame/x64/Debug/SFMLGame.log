@@ -1,27 +1,78 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (TankGame.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+﻿  Bullet.cpp
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Utils.h(15,33): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Utils.h(15,16): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Bullet.cpp(38,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Bullet.cpp(38,16): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  CollisionManager.cpp
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Utils.h(15,33): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Utils.h(15,16): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
   Enemy.cpp
-C:\Users\Santerk\source\repos\TrabajoFinal\SFMLGame\Utils.h(15,33): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Santerk\source\repos\TrabajoFinal\SFMLGame\Utils.h(15,16): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
-C:\Users\Santerk\source\repos\TrabajoFinal\SFMLGame\Enemy.cpp(29,25): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Utils.h(15,33): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Utils.h(15,16): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Enemy.cpp(29,25): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\Santerk\source\repos\TrabajoFinal\SFMLGame\Enemy.cpp(30,25): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Enemy.cpp(30,25): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\Santerk\source\repos\TrabajoFinal\SFMLGame\Enemy.cpp(31,18): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Enemy.cpp(31,18): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\Santerk\source\repos\TrabajoFinal\SFMLGame\Enemy.cpp(32,18): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Enemy.cpp(32,18): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\Santerk\source\repos\TrabajoFinal\SFMLGame\Enemy.cpp(33,20): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Santerk\source\repos\TrabajoFinal\SFMLGame\Enemy.cpp(33,17): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  SFMLGame.vcxproj -> C:\Users\Santerk\source\repos\TrabajoFinal\x64\Debug\ZombieGame.exe
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Enemy.cpp(33,20): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Enemy.cpp(33,17): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Entity.cpp
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Utils.h(15,33): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Utils.h(15,16): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+  EntityManager.cpp
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Utils.h(15,33): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Utils.h(15,16): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+  Game.cpp
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Utils.h(15,33): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Utils.h(15,16): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Game.cpp(62,32): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Game.cpp(62,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  HealthBar.cpp
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Utils.h(15,33): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Utils.h(15,16): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+  Heart.cpp
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Utils.h(15,33): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Utils.h(15,16): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+  Player.cpp
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Utils.h(15,33): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Utils.h(15,16): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Player.cpp(34,20): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Player.cpp(69,20): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Player.cpp(108,43): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Player.cpp(108,40): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Generating Code...
+  Source.cpp
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Utils.h(15,33): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\SFMLGame\Utils.h(15,16): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+  SFMLGame.vcxproj -> C:\Users\Santerk\source\repos\zombiegame\TrabajoFinal\x64\Debug\ZombieGame.exe

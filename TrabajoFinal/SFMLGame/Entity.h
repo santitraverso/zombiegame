@@ -13,6 +13,7 @@ protected:
 	int screenWidth;
 	int screenHeight;
 public:
+	int points;
 	float radius;
 	Entity(string name);
 	Entity(string name, int screenWidth, int screenHeight);

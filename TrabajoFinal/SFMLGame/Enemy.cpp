@@ -31,6 +31,7 @@ void Enemy::Init(Player* player,int x, int y)
     position.x = x;
     position.y = y;
     setPosition(x, y);
+    points = 10;
 }
 
 void Enemy::Update(float deltaTime)

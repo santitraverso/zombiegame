@@ -34,3 +34,8 @@ void EntityManager::OnMouseClick(int x, int y)
 	}
 }
 
+void EntityManager::AddTextEntity(Text* text)
+{
+	textEntities.push_back(text);
+}
+

@@ -3,6 +3,7 @@
 #include <cmath>
 #include <random>
 
+
 const static int gameWidth = 1280;
 const static int gameHeight = 720;
 const int entitySize = 80;
@@ -23,11 +24,16 @@ void Game::_Draw()
     {
         window->draw(*entity);
     }
+    for (Text* textEntity : EntityManager::GetInstance()->GetTextEntities())
+    {
+        window->draw(*textEntity);
+    }
     window->display();
 }
 
 Game::Game() {
     window = new RenderWindow(sf::VideoMode(gameWidth, gameHeight), "My window");
+    
     player = new Player(gameWidth, gameHeight);
     player->Init(window);
     HealthBar* healthBar = new HealthBar(player);
@@ -80,11 +86,11 @@ void Game::Run() {
 
     Clock clockDelta;
     float deltaTime = clockDelta.restart().asSeconds();
-    // run the program as long as the window is open
+
     while (window->isOpen() || isRunning)
     {
         deltaTime = clockDelta.restart().asSeconds();
-        // check all the window's events that were triggered since the last iteration of the loop
+     
         Event event;
         while (window->pollEvent(event))
         {
@@ -98,7 +104,6 @@ void Game::Run() {
                 }
             }
 
-            // "close requested" event: we close the window
             if (event.type == sf::Event::Closed)
                 window->close();
         }

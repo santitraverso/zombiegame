@@ -178,5 +178,6 @@ _Pvt_Extensions
 
 # VS Code settings and extensions
 .vscode/
-
+.vs/
+*.vsidx
 # End of https://www.toptal.com/developers/gitignore/api/c++,visualstudio

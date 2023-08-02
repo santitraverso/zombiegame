@@ -15,8 +15,9 @@ private:
 	Vector2f velocity;
 	Vector2f position;
 	int radius;
+	Player* player;
 public:
-	Bullet(Vector2f pos);
+	Bullet(Vector2f pos, Player* player);
 	virtual ~Bullet();
 	void Update(float deltaTime) override;
 	virtual void ResolveCollision(Vector2f displacement, Entity* other);

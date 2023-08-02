@@ -1,8 +1,10 @@
 #pragma once
 #include <iostream>
 #include <list>
+#include <SFML/Graphics.hpp>
 
 using namespace std;
+using namespace sf;
 
 class Entity; // Foward declaration
 
@@ -10,9 +12,9 @@ class EntityManager
 {
 private:
 	static EntityManager* instance;
-	std::list<Entity*> entities;
+	list<Entity*> entities;
+	list<Text*> textEntities;
 	EntityManager() {};
-
 public:
 	~EntityManager();
 	static EntityManager* GetInstance() {
@@ -24,6 +26,8 @@ public:
 	}
 	void UpdateEntities(float deltaTime);
 	void AddEntity(Entity* entity);
-	std::list<Entity*> GetEntities() { return entities; }
+	list<Entity*> GetEntities() { return entities; }
+	list<Text*> GetTextEntities() { return textEntities; }
 	void OnMouseClick(int x, int y);
+	void AddTextEntity(Text* text);
 };
